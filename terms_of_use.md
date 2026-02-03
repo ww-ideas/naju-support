@@ -6,7 +6,7 @@
 
 ## 1. ACCEPTANCE OF TERMS
 
-Welcome to Naju. These Terms of Use ("Terms") constitute a legal agreement between you ("User" or "you") and Naju ("we," "our," or "the Application"), located at Manzanares 4962, CABA, Argentina.
+Welcome to Naju. These Terms of Use ("Terms") constitute a legal agreement between you ("User" or "you") and Naju ("we," "our," or "the Application").
 
 By downloading, accessing, or using the Naju mobile application, you agree to be bound by these Terms. If you do not agree with these Terms, do not use the Application.
 
