@@ -117,7 +117,7 @@ The Application may provide purchase predictions, replenishment suggestions, and
 
 The collection, use, and protection of your personal information is governed by our Privacy Policy, which forms an integral part of these Terms.
 
-**We recommend that you carefully read our Privacy Policy, available at:** https://github.com/ww-ideas/naju-support/tree/main
+**We recommend that you carefully read our Privacy Policy, available at:** https://ww-ideas.github.io/naju-support/privacy_policy.md
 
 We highlight the following aspects:
 
