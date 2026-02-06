@@ -1,6 +1,7 @@
 # PRIVACY POLICY - NAJU
 
 **Last Updated:** February 2, 2026
+**Version:** 3.0
 
 ---
 
@@ -438,10 +439,6 @@ This Privacy Policy is governed by:
 **By using the Naju Application, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your personal information as described in this policy.**
 
 ---
-
-**Last Updated:** February 2, 2026
-
-**Version:** 2.0
 
 **Previous policy effective until:** December 16, 2025
 
