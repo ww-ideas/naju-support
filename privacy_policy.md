@@ -1,6 +1,6 @@
 # PRIVACY POLICY - NAJU
 
-**Last Updated:** February 2, 2026
+**Last Updated:** February 6, 2026
 
 **Version:** 3.0
 
