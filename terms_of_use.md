@@ -2,6 +2,8 @@
 
 **Last Updated:** February 5, 2026
 
+**Version:** 3.0
+
 ---
 
 ## 1. ACCEPTANCE OF TERMS
@@ -289,8 +291,3 @@ https://www.linkedin.com/company/naju
 
 By using the Naju Application, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy.
 
----
-
-**Last Updated:** February 2, 2026
-
-**Version:** 1.0
