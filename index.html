@@ -205,6 +205,43 @@
       color: var(--naju-blue-dark);
     }
 
+    .steps .step-option {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(1, 117, 194, 0.05);
+      border-radius: 12px;
+      border-left: 3px solid var(--naju-blue);
+    }
+
+    .steps .step-option:first-of-type {
+      margin-top: 0.75rem;
+    }
+
+    .steps .step-option strong {
+      font-size: 0.95rem;
+      margin-bottom: 0.35em;
+    }
+
+    .steps .step-option p {
+      margin: 0 0 0.5em;
+      font-size: 0.95rem;
+    }
+
+    .steps .step-option p:last-child {
+      margin-bottom: 0;
+    }
+
+    .steps .step-option .telegram-handle {
+      font-family: ui-monospace, monospace;
+      font-size: 0.9em;
+      color: var(--naju-blue-dark);
+      text-decoration: none;
+    }
+
+    .steps .step-option .telegram-handle:hover {
+      text-decoration: underline;
+    }
+
     /* Store badges */
     .stores {
       display: flex;
@@ -321,20 +358,29 @@
       <div class="card">
         <ol class="steps">
           <li>
-            <strong>Descargá la app</strong>
-            Desde App Store (iPhone/iPad) o Google Play (Android). Creá tu cuenta con tu correo.
+            <strong>Descargar e instalar la app</strong>
+            Obtené Naju desde App Store (iPhone o iPad) o Google Play (Android) e instalala en tu dispositivo.
           </li>
           <li>
-            <strong>Mi perfil</strong>
-            Completá tu perfil y preferencias. Ahí podés gestionar tu información y configuración.
+            <strong>Crear tu usuario</strong>
+            Elegí un nombre de usuario y una contraseña para crear tu cuenta.
           </li>
           <li>
-            <strong>Mi lista</strong>
-            Armá tu lista de compras a partir de lo que tenés en tu despensa o de lo que necesitás. La app te ayuda a no olvidar nada.
+            <strong>Asociar un Código de hogar</strong>
+            Al ingresar a la app, tenés que vincular un hogar. Podés unirte a uno existente o crear uno nuevo.
+            <div class="step-option">
+              <strong>Unirse a un hogar existente</strong>
+              <p>Pedile a la persona que ya tiene un código de hogar que lo comparta con vos: pasale tu <strong>nombre de usuario</strong> para que pueda compartirlo. Cuando lo comparta, el hogar aparecerá en la pantalla <strong>Perfil</strong> y podrás seleccionarlo como activo.</p>
+            </div>
+            <div class="step-option">
+              <strong>Crear un código de hogar nuevo</strong>
+              <p>Presioná <strong>«Crear código de Hogar»</strong>. Si querés recibir notificaciones por Telegram, enviá el mensaje <em>«Hola, quisiera saber mi código de hogar»</em> al bot <a href="https://t.me/juanito_shopping_bot" target="_blank" rel="noopener noreferrer" class="telegram-handle">@juanito_shopping_bot</a> y te indicará tu código. Si no usás Telegram, podés inventar un código cualquiera; en ese caso no recibirás notificaciones.</p>
+              <p>Completá todo el onboarding; se creará el perfil del hogar y aparecerá en la pantalla <strong>Perfil</strong> para que lo selecciones como activo.</p>
+            </div>
           </li>
           <li>
-            <strong>Mi carrito</strong>
-            Revisá y gestioná tu carrito de compras. Cuando el servicio esté disponible en tu zona, podrás completar pedidos desde la app.
+            <strong>Usar la app</strong>
+            A partir de ahí ya podés usar Naju con normalidad para armar tu lista de compras y gestionar tu carrito.
           </li>
         </ol>
       </div>
