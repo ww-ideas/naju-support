@@ -117,7 +117,7 @@ The Application may provide purchase predictions, replenishment suggestions, and
 
 The collection, use, and protection of your personal information is governed by our Privacy Policy, which forms an integral part of these Terms.
 
-**We recommend that you carefully read our Privacy Policy, available at:** https://ww-ideas.github.io/naju-support/privacy_policy.md
+**We recommend that you carefully read our Privacy Policy**, available on this support site (Política de privacidad / Privacy Policy).
 
 We highlight the following aspects:
 
@@ -281,7 +281,8 @@ Naju shall not be liable for any failure or delay in performing its obligations 
 For any questions, comments, or requests related to these Terms, you may contact us at:
 
 **Naju**  
-https://www.linkedin.com/company/naju
+- Email: soporte@naju.com.ar  
+- LinkedIn: https://www.linkedin.com/company/naju
 
 ---
 

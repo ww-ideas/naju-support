@@ -294,7 +294,7 @@ When processing is based on consent, you may withdraw it at any time.
 
 To exercise any of these rights, you may:
 
-1. Contact us by at https://www.linkedin.com/company/naju
+1. Contact us at soporte@naju.com.ar or via https://www.linkedin.com/company/naju
 2. Use the privacy settings within the Application
 
 **We will respond to your request within 10 business days** as required by Argentine law. In some cases, we may need to verify your identity before processing your request.
@@ -404,7 +404,8 @@ Your continued use of the Service after the publication of changes constitutes y
 
 If you have any questions about this Privacy Policy, you may contact us:
 
-https://www.linkedin.com/company/naju/
+- Email: soporte@naju.com.ar
+- LinkedIn: https://www.linkedin.com/company/naju/
 
 ### 15.2 Response Time
 

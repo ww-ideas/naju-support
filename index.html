@@ -2,11 +2,362 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Soporte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto y soporte · Naju</title>
+  <meta name="description" content="Soporte, política de privacidad y guía de uso de Naju — tu asistente de compras de supermercado.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --naju-blue: #0175C2;
+      --naju-blue-dark: #015a96;
+      --naju-cream: #FAEFD3;
+      --naju-cream-dark: #e8dbb8;
+      --text: #1a1a1a;
+      --text-muted: #5c5c5c;
+      --bg: #faf9f6;
+      --card: #ffffff;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(1, 117, 194, 0.08);
+      --shadow-hover: 0 8px 32px rgba(1, 117, 194, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Outfit', 'DM Sans', sans-serif;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header / Hero */
+    header {
+      padding: 2.5rem 0 3rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--naju-cream) 0%, var(--bg) 100%);
+      border-radius: 0 0 2rem 2rem;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      margin: 0 0 0.35em;
+      color: var(--naju-blue-dark);
+    }
+
+    header .tagline {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin: 0;
+      max-width: 32ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Sections */
+    section {
+      padding: 2rem 0;
+    }
+
+    section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 1rem;
+      color: var(--naju-blue-dark);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      margin: 0 0 0.75em;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Contact */
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--naju-blue);
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 12px;
+      background: rgba(1, 117, 194, 0.08);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .contact-email:hover {
+      background: rgba(1, 117, 194, 0.14);
+      color: var(--naju-blue-dark);
+    }
+
+    .contact-email svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* Legal links */
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .legal-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--naju-blue);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0.9rem;
+      border-radius: 10px;
+      border: 1px solid rgba(1, 117, 194, 0.25);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .legal-links a:hover {
+      background: rgba(1, 117, 194, 0.08);
+      border-color: var(--naju-blue);
+    }
+
+    /* Steps */
+    .steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: step;
+    }
+
+    .steps li {
+      position: relative;
+      padding-left: 3rem;
+      padding-bottom: 1.25rem;
+      counter-increment: step;
+    }
+
+    .steps li:last-child {
+      padding-bottom: 0;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background: var(--naju-blue);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .steps li strong {
+      display: block;
+      margin-bottom: 0.2em;
+      color: var(--naju-blue-dark);
+    }
+
+    /* Store badges */
+    .stores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--card);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .store-badge:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .store-badge img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .store-badge.apple { color: #000; }
+    .store-badge.google { color: #000; }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0 2.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      margin-top: 1rem;
+    }
+
+    footer p {
+      margin: 0 0 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--naju-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Soporte – Naju</h1>
-  <p>Para soporte o consultas:</p>
-  <p>emiwino@hotmail.com</p>
+  <header>
+    <div class="wrap">
+      <img src="assets/logo.png" alt="Naju" class="logo" width="88" height="88">
+      <h1>Naju</h1>
+      <p class="tagline">Tu asistente de compras de supermercado. Menos vueltas, más claridad.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="contacto">
+      <h2>Contacto y soporte</h2>
+      <div class="card">
+        <p>¿Tenés consultas, sugerencias o necesitás ayuda con la app? Escribinos:</p>
+        <a href="mailto:soporte@naju.com.ar" class="contact-email">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          soporte@naju.com.ar
+        </a>
+      </div>
+    </section>
+
+    <section id="descargar">
+      <h2>Descargar la app</h2>
+      <div class="card">
+        <p>Naju está disponible para celular y tablet en App Store y Google Play.</p>
+        <div class="stores">
+          <a href="https://apps.apple.com/app/naju/id674600629" class="store-badge apple" target="_blank" rel="noopener noreferrer" aria-label="Descargar en App Store">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.wwideas.naju_app" class="store-badge google" target="_blank" rel="noopener noreferrer" aria-label="Descargar en Google Play">
+            <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.16 5.947a.998.998 0 01-1.466-.83l-.01-14.02a1 1 0 011.467-.83l10.16 5.947zM14.205 12L5.792 3.587a.999.999 0 011.466-.83l10.163 5.948-2.302 2.302-1.914 1.095z"/><path fill="#34A853" d="M21.803 12.861l-3.199-1.828-.006-.003-3.393 1.945-1.294 1.294 2.302 2.302 3.59-2.054a1 1 0 00.4-1.656z"/><path fill="#FBBC05" d="M14.205 12l1.914-1.095 2.302-2.302-2.302-2.302-1.914-1.095-2.302 2.302z"/><path fill="#EA4335" d="M21.803 12.861a1 1 0 00-.4-1.656l-3.59-2.054-2.302 2.302 2.302 2.302 3.59 2.054a1 1 0 00.4-1.656z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-empezar">
+      <h2>Cómo empezar</h2>
+      <div class="card">
+        <ol class="steps">
+          <li>
+            <strong>Descargá la app</strong>
+            Desde App Store (iPhone/iPad) o Google Play (Android). Creá tu cuenta con tu correo.
+          </li>
+          <li>
+            <strong>Mi perfil</strong>
+            Completá tu perfil y preferencias. Ahí podés gestionar tu información y configuración.
+          </li>
+          <li>
+            <strong>Mi lista</strong>
+            Armá tu lista de compras a partir de lo que tenés en tu despensa o de lo que necesitás. La app te ayuda a no olvidar nada.
+          </li>
+          <li>
+            <strong>Mi carrito</strong>
+            Revisá y gestioná tu carrito de compras. Cuando el servicio esté disponible en tu zona, podrás completar pedidos desde la app.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="legal">
+      <h2>Información legal</h2>
+      <div class="card">
+        <p>Políticas y condiciones de uso de Naju:</p>
+        <div class="legal-links">
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="terminos.html">Términos de uso</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Naju — Tecnología, información e internet</p>
+      <p>Repensando cada momento de la experiencia de compra.</p>
+      <a href="https://www.linkedin.com/company/naju/" class="linkedin-link" target="_blank" rel="noopener noreferrer">Naju en LinkedIn</a>
+    </div>
+  </footer>
 </body>
 </html>
