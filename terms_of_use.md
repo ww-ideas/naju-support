@@ -1,6 +1,8 @@
 # TERMS OF USE - NAJU
 
-**Last Updated:** February 5, 2026
+**Last Updated:** February 6, 2026
+
+**Version:** 3.0
 
 ---
 
@@ -290,8 +292,3 @@ For any questions, comments, or requests related to these Terms, you may contact
 
 By using the Naju Application, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy.
 
----
-
-**Last Updated:** February 2, 2026
-
-**Version:** 1.0
