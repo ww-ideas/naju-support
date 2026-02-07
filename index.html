@@ -217,9 +217,20 @@
       margin-top: 0.75rem;
     }
 
-    .steps .step-option strong {
-      font-size: 0.95rem;
-      margin-bottom: 0.35em;
+    /* Subtítulos de opción (Unirse... / Crear...): más destacados que el texto */
+    .steps .step-option .step-option-title {
+      display: block;
+      font-family: 'Outfit', 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--naju-blue-dark);
+      margin-bottom: 0.4em;
+    }
+
+    /* Referencias inline (nombre de usuario, Perfil, «Crear código...»): sutiles */
+    .steps .step-option p strong {
+      font-weight: 600;
+      color: var(--text);
     }
 
     .steps .step-option p {
@@ -369,11 +380,11 @@
             <strong>Asociar un Código de hogar</strong>
             Al ingresar a la app, tenés que vincular un hogar. Podés unirte a uno existente o crear uno nuevo.
             <div class="step-option">
-              <strong>Unirse a un hogar existente</strong>
+              <span class="step-option-title">Unirse a un hogar existente</span>
               <p>Pedile a la persona que ya tiene un código de hogar que lo comparta con vos: pasale tu <strong>nombre de usuario</strong> para que pueda compartirlo. Cuando lo comparta, el hogar aparecerá en la pantalla <strong>Perfil</strong> y podrás seleccionarlo como activo.</p>
             </div>
             <div class="step-option">
-              <strong>Crear un código de hogar nuevo</strong>
+              <span class="step-option-title">Crear un código de hogar nuevo</span>
               <p>Presioná <strong>«Crear código de Hogar»</strong>. Si querés recibir notificaciones por Telegram, enviá el mensaje <em>«Hola, quisiera saber mi código de hogar»</em> al bot <a href="https://t.me/juanito_shopping_bot" target="_blank" rel="noopener noreferrer" class="telegram-handle">@juanito_shopping_bot</a> y te indicará tu código. Si no usás Telegram, podés inventar un código cualquiera; en ese caso no recibirás notificaciones.</p>
               <p>Completá todo el onboarding; se creará el perfil del hogar y aparecerá en la pantalla <strong>Perfil</strong> para que lo selecciones como activo.</p>
             </div>
