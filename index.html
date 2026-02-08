@@ -199,7 +199,8 @@
       justify-content: center;
     }
 
-    .steps li strong {
+    /* Solo el título del paso (strong hijo directo de li) en bloque */
+    .steps li > strong {
       display: block;
       margin-bottom: 0.2em;
       color: var(--naju-blue-dark);
