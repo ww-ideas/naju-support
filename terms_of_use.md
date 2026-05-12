@@ -31,7 +31,7 @@ The Application is available for iOS and Android mobile devices.
 
 ### 2.2 Full Service Availability
 
-To provide the best possible service to our users, the complete Naju experience, which includes the provision of products in a timely manner, is currently limited to a select and limited number of users.
+To provide the best possible service to our users, the complete Naju experience, which includes the provision of products in a timely manner, is currently limited to a selected and limited number of users.
 
 **Gradual Access:** Access to the complete features of the platform, which requests for payment data and delivery address, is in a gradual implementation phase. This number of users is continuously increasing as we expand our operational capacity.
 
