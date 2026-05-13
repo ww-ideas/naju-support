@@ -173,7 +173,11 @@ If you have access to the app, you can request account deletion from the profile
 
 ### 9.2 External Deletion Request
 
-If you cannot access the app and want your account or personal data deleted, you can request deletion by contacting us at:
+If you cannot access the app and want your account or personal data deleted, you can use our public account deletion page:
+
+- https://ww-ideas.github.io/naju-support/account-deletion.html
+
+You may also request deletion by contacting us at:
 
 - Email: soporte@naju.com.ar
 - LinkedIn: https://www.linkedin.com/company/naju/

@@ -128,7 +128,7 @@ We highlight the following aspects:
 - We implement security measures to protect your information
 - We do not sell your personal data to third parties
 - You have rights over your personal data, including access, rectification, and deletion
-- You may request account deletion from within the app or through the external contact methods described in the Privacy Policy
+- You may request account deletion from within the app or through the external account deletion page and contact methods described in the Privacy Policy
 
 ---
 
@@ -174,7 +174,7 @@ Estimated delivery times will be provided at the time of ordering. While we make
 
 ### 10.1 Termination by User
 
-You may stop using the service at any time. You may also request account deletion through the means made available in the app or through the contact channels indicated in our Privacy Policy and these Terms.
+You may stop using the service at any time. You may also request account deletion through the means made available in the app or through the public account deletion page and contact channels indicated in our Privacy Policy and these Terms.
 
 ### 10.2 Suspension and Deletion by Naju
 
