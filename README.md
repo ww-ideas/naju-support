@@ -6,6 +6,7 @@ Documentación legal y soporte para la aplicación Naju.
 
 - **terms_of_use.md** – Términos de uso (Terms of Use).
 - **privacy_policy.md** – Política de privacidad (Privacy Policy).
+- **account_deletion.md** – Instrucciones públicas de eliminación de cuenta para Google Play.
 
 ## Uso en la app Naju
 
@@ -13,6 +14,7 @@ La aplicación Naju carga estos documentos desde:
 
 - https://ww-ideas.github.io/naju-support/terms_of_use.md  
 - https://ww-ideas.github.io/naju-support/privacy_policy.md  
+- https://ww-ideas.github.io/naju-support/account-deletion.html
 
 Si GitHub Pages sirve HTML en lugar de Markdown, la app usa como respaldo las URLs raw de GitHub (`raw.githubusercontent.com/ww-ideas/naju-support/main/...`).
 
