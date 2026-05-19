@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account deletion · Naju</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root {
+      --naju-blue: #0175C2;
+      --naju-blue-dark: #015a96;
+      --text: #1a1a1a;
+      --text-muted: #5c5c5c;
+      --bg: #faf9f6;
+      --card: #ffffff;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 600; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav {
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+    .nav a {
+      color: var(--naju-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .doc {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(1, 117, 194, 0.08);
+      margin-bottom: 2rem;
+    }
+    .doc h1 { font-size: 1.5rem; margin-top: 0; color: var(--naju-blue-dark); }
+    .doc h2 { font-size: 1.2rem; margin: 1.5em 0 0.5em; color: var(--naju-blue-dark); }
+    .doc h3 { font-size: 1.05rem; margin: 1.25em 0 0.4em; }
+    .doc p { margin: 0.5em 0; }
+    .doc ul, .doc ol { margin: 0.5em 0; padding-left: 1.5em; }
+    .doc hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 1.5em 0; }
+    .doc strong { color: var(--text); }
+    .doc a { color: var(--naju-blue); }
+    .loading { color: var(--text-muted); padding: 2rem; text-align: center; }
+    .error { color: #c53030; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html">← Back to support</a>
+    </nav>
+    <article class="doc" id="content">
+      <p class="loading">Loading account deletion instructions…</p>
+    </article>
+  </div>
+  <script type="text/plain" id="account-deletion-md"># Account and data deletion · Naju
+
+**Last updated:** May 18, 2026
+
+This page explains how to delete your Naju account and associated personal data.
+
+---
+
+## Delete your account in the app
+
+If you still have access to the app:
+
+1. Open **Naju** on your phone or tablet.
+2. Go to **Perfil** (Profile).
+3. Tap **Delete account** and follow the on-screen steps to confirm.
+
+---
+
+## Request deletion without app access
+
+If you cannot sign in or no longer have the app installed, you can request deletion by email:
+
+- **Email:** soporte@naju.com.ar
+
+Please write from the email address linked to your Naju account, or include enough information for us to verify your identity (for example, the email you used to register and your full name).
+
+You may also contact us on LinkedIn: https://www.linkedin.com/company/naju/
+
+---
+
+## What happens after you request deletion
+
+When your request is processed, we delete or anonymize your personal data, except where we must keep certain information for legal obligations, security, fraud prevention, or backup retention periods described in our Privacy Policy.
+
+---
+
+## Related documents
+
+- Privacy Policy (privacy_policy.md) — section 9 (Account and data deletion)
+- Terms of Use (terms_of_use.md)
+
+**Contact:** soporte@naju.com.ar · info@naju.com.ar
+</script>
+  <script>
+    (function () {
+      var content = document.getElementById('content');
+      var fallback = document.getElementById('account-deletion-md');
+
+      function render(md) {
+        content.innerHTML = marked.parse(md);
+      }
+
+      function showError() {
+        content.innerHTML = '<p class="error">Could not load the document. <a href="account_deletion.md">Open the Markdown file</a>.</p>';
+      }
+
+      if (location.protocol === 'file:') {
+        render(fallback.textContent.trim());
+        return;
+      }
+
+      fetch('account_deletion.md')
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(render)
+        .catch(function () {
+          if (fallback) render(fallback.textContent.trim());
+          else showError();
+        });
+    })();
+  </script>
+</body>
+</html>
