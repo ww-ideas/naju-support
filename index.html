@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Naju — Tu asistente de compras para el hogar</title>
-  <meta name="description" content="Naju usa la IA para conocerte, saber lo que necesitás y abastecer tu hogar. App gratis para celular y tablet. www.naju.com.ar">
+  <title>Naju — Juanito, tu asistente de compras para el hogar</title>
+  <meta name="description" content="Naju es tu asistente personal de compras para el hogar. Juanito aprende de vos mientras comprás para abastecer tu hogar, ahorrarte tiempo y dinero.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,9 @@
       --naju-blue-dark: #015a96;
       --naju-cream: #FAEFD3;
       --naju-cream-dark: #e8dbb8;
+      --hero-gradient-start: #DDF1FF;
+      --hero-gradient-end: #CFF8EA;
+      --hero-border: #BDE7DB;
       --text: #1a1a1a;
       --text-muted: #5c5c5c;
       --bg: #faf9f6;
@@ -50,7 +53,6 @@
       padding: 0 1.5rem;
     }
 
-    /* ========== Header / Nav ========== */
     .site-header {
       position: sticky;
       top: 0;
@@ -99,14 +101,14 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       padding: 0.4rem 0.6rem;
       border-radius: 8px;
       transition: color 0.2s, background 0.2s;
@@ -121,30 +123,374 @@
       outline-offset: 2px;
     }
 
-    /* ========== Hero: app primero ========== */
+    /* ========== Hero Juanito ========== */
     .hero {
-      padding: 2rem 0 2.5rem;
-      text-align: center;
-      background: linear-gradient(180deg, var(--naju-cream) 0%, var(--bg) 75%);
+      padding: 1.75rem 0 1.5rem;
+      background: linear-gradient(180deg, var(--naju-cream) 0%, var(--bg) 85%);
       border-radius: 0 0 2rem 2rem;
     }
 
-    .hero .hero-headline {
-      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
-      margin: 0 0 0.75rem;
-      color: var(--naju-blue-dark);
+    .hero-juanito {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: left;
+      min-height: 0;
+      padding: 1rem 1rem 0;
+      background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+      border: 1px solid var(--hero-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .hero-juanito-figure {
+      align-self: center;
+      width: min(220px, 58vw);
+      margin: 0 auto -0.5rem;
+      line-height: 0;
+      flex-shrink: 0;
+    }
+
+    .hero-juanito-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      object-position: bottom center;
+    }
+
+    .hero-juanito-copy {
+      padding: 0 0.75rem 1.25rem;
+    }
+
+    .hero-juanito-copy h1 {
+      font-size: clamp(1.35rem, 4vw, 1.65rem);
+      margin: 0 0 0.65rem;
+      color: #111827;
       letter-spacing: -0.02em;
-      font-weight: 600;
     }
 
-    .hero .hero-oneliner {
-      font-size: 1.05rem;
-      line-height: 1.5;
+    .hero-juanito-copy p {
+      margin: 0 0 0.65em;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: #111827;
+    }
+
+    .hero-juanito-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 600px) {
+      .hero-juanito {
+        flex-direction: row;
+        align-items: flex-end;
+        min-height: 240px;
+        padding: 1.25rem 1.25rem 0;
+      }
+
+      .hero-juanito-figure {
+        width: 42%;
+        max-width: 280px;
+        margin: 0;
+        align-self: flex-end;
+      }
+
+      .hero-juanito-copy {
+        flex: 1;
+        padding: 0.5rem 0 1.5rem 0.5rem;
+        align-self: center;
+      }
+    }
+
+    /* ========== Sección pasos ========== */
+    .how-section {
+      padding: 2.25rem 0 1.5rem;
+    }
+
+    .how-section > .wrap > h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.35rem;
+      color: var(--naju-blue-dark);
+      text-align: center;
+    }
+
+    .how-section .section-lead {
+      text-align: center;
       color: var(--text-muted);
-      margin: 0 auto 1rem;
-      max-width: 36ch;
+      margin: 0 0 1.25rem;
+      font-size: 1rem;
     }
 
+    .steps-carousel-nav {
+      position: relative;
+    }
+
+    .steps-carousel-nav input { display: none; }
+
+    .steps-carousel-wrap {
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    .steps-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .steps-carousel::-webkit-scrollbar { display: none; }
+
+    .steps-carousel .step-card {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      box-sizing: border-box;
+      padding: 0 0.15rem;
+    }
+
+    .step-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--hero-border);
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+    }
+
+    .step-card--learn {
+      background: linear-gradient(160deg, #DDF1FF 0%, #E8F6FF 45%, #F5FBFF 100%);
+      border-color: #B8DCF5;
+    }
+
+    .step-card--predict {
+      background: linear-gradient(160deg, #FFF6E8 0%, #FFECD0 45%, #FFF9F0 100%);
+      border-color: #F0D9A8;
+    }
+
+    .step-card--save {
+      background: linear-gradient(160deg, #DDF1FF 0%, #CFF8EA 45%, #E8FFF5 100%);
+      border-color: var(--hero-border);
+    }
+
+    /* Escena en dos filas: diálogo (Juanito + burbuja) y teléfono sin solaparse */
+    .step-card-scene {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      padding: 0.85rem 0.75rem 1rem;
+      min-height: clamp(460px, 105vw, 580px);
+    }
+
+    .step-card-row--dialog {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      align-items: stretch;
+      gap: 0.35rem;
+      min-height: 0;
+    }
+
+    .step-card-bubble {
+      order: 1;
+      flex: 0 0 auto;
+      position: relative;
+      margin: 0;
+      padding: 0.8rem 0.95rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+
+    .step-card-bubble::before {
+      content: '';
+      position: absolute;
+      left: 1.5rem;
+      bottom: -6px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transform: rotate(45deg);
+    }
+
+    .step-card-juanito {
+      order: 2;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: 200px;
+      width: 100%;
+      max-width: none;
+      line-height: 0;
+      pointer-events: none;
+    }
+
+    .step-card-juanito img {
+      width: auto;
+      max-width: 100%;
+      height: 100%;
+      max-height: min(340px, 42vh);
+      min-height: 200px;
+      object-fit: contain;
+      object-position: bottom center;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(1, 117, 194, 0.14));
+    }
+
+    .step-card-bubble-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-card-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--naju-blue);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .step-card-bubble h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      color: var(--naju-blue-dark);
+    }
+
+    .step-card-bubble p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+
+    .step-card-row--phone {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .step-card-phone {
+      width: min(100%, 320px);
+      margin: 0;
+      padding: 0.55rem;
+      background: #1a1a1a;
+      border-radius: 30px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .step-card-phone-inner {
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+      line-height: 0;
+    }
+
+    .step-card-phone-inner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .steps-carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .steps-carousel-dots label {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--naju-cream-dark);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .steps-carousel-dots label:hover {
+      background: var(--naju-blue);
+      opacity: 0.85;
+    }
+
+    .steps-carousel-dots label:focus-visible {
+      outline: 2px solid var(--naju-blue);
+      outline-offset: 2px;
+    }
+
+    .steps-carousel-nav input:nth-of-type(1):checked ~ .steps-carousel-dots label:nth-of-type(1),
+    .steps-carousel-nav input:nth-of-type(2):checked ~ .steps-carousel-dots label:nth-of-type(2),
+    .steps-carousel-nav input:nth-of-type(3):checked ~ .steps-carousel-dots label:nth-of-type(3) {
+      background: var(--naju-blue);
+      transform: scale(1.2);
+    }
+
+    @media (min-width: 640px) {
+      .step-card-scene {
+        display: grid;
+        grid-template-columns: 1fr 36%;
+        grid-template-rows: auto 1fr;
+        gap: 0.75rem 1rem;
+        padding: 1rem 1.1rem 1.15rem;
+        align-items: end;
+      }
+
+      .step-card-row--dialog {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        min-height: 100%;
+      }
+
+      .step-card-juanito {
+        min-height: 240px;
+      }
+
+      .step-card-juanito img {
+        max-height: min(420px, 52vh);
+        min-height: 240px;
+      }
+
+      .step-card-bubble {
+        padding: 1rem 1.1rem;
+      }
+
+      .step-card-bubble::before {
+        left: 1.25rem;
+        bottom: -6px;
+      }
+
+      .step-card-bubble p {
+        font-size: 0.95rem;
+      }
+
+      .step-card-row--phone {
+        grid-column: 2;
+        grid-row: 1 / -1;
+        align-items: center;
+      }
+
+      .step-card-phone {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    /* ========== Descargar ========== */
     .store-badge {
       display: inline-flex;
       align-items: center;
@@ -170,15 +516,11 @@
       outline-offset: 2px;
     }
 
-    .store-badge img, .store-badge svg {
+    .store-badge svg {
       width: 28px;
       height: 28px;
-      object-fit: contain;
       flex-shrink: 0;
     }
-
-    .store-badge.apple { color: #000; }
-    .store-badge.google { color: #000; }
 
     .store-badge.disabled {
       pointer-events: none;
@@ -193,158 +535,15 @@
       box-shadow: none;
     }
 
-    .section { padding: 2rem 0; }
-
-    /* ========== Carrusel (imágenes lifestyle) ========== */
-    .carousel-wrap {
-      width: calc(100% + 3rem);
-      max-width: 100vw;
-      margin: -0.5rem -1.5rem 1.25rem;
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: none;
-      border: none;
-      background: #fff;
-    }
-    @media (min-width: 600px) {
-      .carousel-wrap {
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto 1.25rem;
-        border-radius: 20px;
-        box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-        border: 1px solid rgba(0,0,0,0.08);
-      }
-    }
-
-    .carousel {
-      display: flex;
-      scroll-snap-type: x mandatory;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .carousel::-webkit-scrollbar { height: 6px; }
-    .carousel::-webkit-scrollbar-track { background: rgba(0,0,0,0.06); border-radius: 3px; }
-    .carousel::-webkit-scrollbar-thumb { background: var(--naju-blue); border-radius: 3px; }
-
-    .carousel-slide {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
-      min-height: 0;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0;
-    }
-
-    .carousel-slide .slide-placeholder {
-      width: 100%;
-      background: #fff;
-      display: block;
-      line-height: 0;
-    }
-
-    .carousel-slide .slide-placeholder img {
-      width: 100%;
-      height: auto;
-      max-height: 88vh;
-      display: block;
-      object-fit: contain;
-      object-position: top center;
-    }
-    @media (min-width: 600px) {
-      .carousel-slide .slide-placeholder img {
-        max-height: 85vh;
-      }
-    }
-
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .carousel-dots label {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--naju-cream-dark);
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .carousel-dots label:hover { background: var(--naju-blue); opacity: 0.8; }
-    .carousel-dots label:focus-visible {
-      outline: 2px solid var(--naju-blue);
-      outline-offset: 2px;
-    }
-
-    .carousel-nav input { display: none; }
-    .carousel-nav input:nth-of-type(1):checked ~ .carousel-dots label:nth-of-type(1),
-    .carousel-nav input:nth-of-type(2):checked ~ .carousel-dots label:nth-of-type(2),
-    .carousel-nav input:nth-of-type(3):checked ~ .carousel-dots label:nth-of-type(3) {
-      background: var(--naju-blue);
-      transform: scale(1.2);
-    }
-
-    .carousel-nav input:nth-of-type(1):checked ~ .carousel-wrap .carousel { scroll-margin-left: 0; }
-    .carousel-nav input:nth-of-type(2):checked ~ .carousel-wrap .carousel { scroll-margin-left: 100%; }
-    .carousel-nav input:nth-of-type(3):checked ~ .carousel-wrap .carousel { scroll-margin-left: 200%; }
-
-    .carousel-dots label { position: relative; }
-    .carousel-dots label::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 24px;
-      height: 24px;
-    }
-
-    /* ========== Beneficios (3 líneas) ========== */
-    .benefit-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.25rem 2rem;
-      margin: 1rem auto 0;
-      max-width: 520px;
-    }
-
-    .benefit-strip span {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .benefit-strip span::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--naju-blue);
-      flex-shrink: 0;
-    }
-
-    /* ========== Bloque Descargar ========== */
     .download-block {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 2.5rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
     }
     .download-block .download-title {
-      font-family: 'Outfit', 'DM Sans', sans-serif;
       font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--naju-blue-dark);
       margin: 0 0 0.25rem;
+      color: var(--naju-blue-dark);
     }
     .download-block .stores {
       display: inline-flex;
@@ -354,103 +553,20 @@
       margin-top: 1rem;
     }
 
-    /* Cards genéricas (por si se agregan secciones) */
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      margin-bottom: 1rem;
+    /* ========== Footer ========== */
+    footer {
+      padding: 2rem 0 2.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.06);
     }
-
-    .card p { margin: 0 0 0.75em; }
-    .card p:last-child { margin-bottom: 0; }
-
-    section h2 {
-      font-size: 1.35rem;
-      margin: 0 0 1rem;
-      color: var(--naju-blue-dark);
-    }
-
-    /* Steps (cómo empezar) */
-    .steps {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      counter-reset: step;
-    }
-
-    .steps li {
-      position: relative;
-      padding-left: 3rem;
-      padding-bottom: 1.25rem;
-      counter-increment: step;
-    }
-
-    .steps li:last-child { padding-bottom: 0; }
-
-    .steps li::before {
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1.75rem;
-      height: 1.75rem;
-      border-radius: 50%;
-      background: var(--naju-blue);
-      color: #fff;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .steps li > strong {
-      display: block;
-      margin-bottom: 0.2em;
-      color: var(--naju-blue-dark);
-    }
-
-    .steps .step-option {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: rgba(1, 117, 194, 0.05);
-      border-radius: 12px;
-      border-left: 3px solid var(--naju-blue);
-    }
-
-    .steps .step-option .step-option-title {
-      display: block;
-      font-family: 'Outfit', 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--naju-blue-dark);
-      margin-bottom: 0.4em;
-    }
-
-    .steps .step-option p { margin: 0 0 0.5em; font-size: 0.95rem; }
-    .steps .step-option p:last-child { margin-bottom: 0; }
-    .steps .step-option .telegram-handle {
-      font-family: ui-monospace, monospace;
-      font-size: 0.9em;
-      color: var(--naju-blue-dark);
-      text-decoration: none;
-    }
-    .steps .step-option .telegram-handle:hover { text-decoration: underline; }
-
-    /* Footer */
-
-    footer { padding: 2rem 0 2.5rem; text-align: center; border-top: 1px solid rgba(0,0,0,0.06); }
     footer p { margin: 0 0 0.75rem; font-size: 0.9rem; color: var(--text-muted); }
-    footer a { color: var(--naju-blue); text-decoration: none; font-weight: 500; }
+    footer a {
+      color: var(--naju-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
     footer a:hover { text-decoration: underline; }
     footer a:focus-visible {
-      outline: 2px solid var(--naju-blue);
-      outline-offset: 2px;
-    }
-    .footer-details summary:focus-visible {
       outline: 2px solid var(--naju-blue);
       outline-offset: 2px;
     }
@@ -476,16 +592,7 @@
     }
     .footer-contact-item a {
       font-weight: 600;
-      color: var(--naju-blue);
     }
-
-    .footer-details { margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
-    .footer-details summary { cursor: pointer; color: var(--naju-blue); font-weight: 500; }
-    .footer-details ol { list-style: decimal; padding-left: 1.5rem; }
-    .footer-details li { margin-bottom: 0.35rem; }
-    .footer-details .steps { counter-reset: none; }
-    .footer-details .steps li { padding-left: 0; }
-    .footer-details .steps li::before { display: none; }
   </style>
 </head>
 <body>
@@ -497,6 +604,7 @@
         <span>Naju</span>
       </a>
       <nav class="nav-links" aria-label="Principal">
+        <a href="#como-funciona">Cómo funciona</a>
         <a href="#descargar">Descargar</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -504,63 +612,131 @@
   </header>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="wrap">
-      <h1 class="hero-headline">Tu asistente de compras para el hogar.</h1>
-      <div class="carousel-nav">
-        <input type="radio" name="carousel" id="c1" checked>
-        <input type="radio" name="carousel" id="c2">
-        <input type="radio" name="carousel" id="c3">
-        <div class="carousel-wrap">
-          <div class="carousel" id="carousel-el">
-            <div class="carousel-slide">
-              <div class="slide-placeholder">
-                <img src="assets/images/mujer-cocina-2.png" alt="Naju en la cocina" width="360" height="450" loading="eager">
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="slide-placeholder">
-                <img src="assets/images/hombre-alacena-1.png" alt="Revisando la alacena con Naju" width="360" height="450" loading="lazy">
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="slide-placeholder">
-                <img src="assets/images/mujer-recibiendo-pedido-1.png" alt="Recibiendo el pedido en casa" width="360" height="450" loading="lazy">
-              </div>
-            </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-juanito">
+          <div class="hero-juanito-figure">
+            <img src="assets/images/assistant_juanito_close.png" alt="Juanito, asistente personal de compras de Naju" width="488" height="552" loading="eager">
+          </div>
+          <div class="hero-juanito-copy">
+            <h1 id="hero-title">¡Hola! Soy Juanito 👋</h1>
+            <p>Soy tu <strong>asistente personal de Naju para las compras del hogar</strong>.</p>
+            <p>A medida que comprás, voy <strong>aprendiendo sobre vos</strong> para que <strong>no te falte nada en tu casa</strong>.</p>
+            <p>Vas a <strong>ahorrar tiempo y dinero!</strong> y olvidarte del problema de hacer las compras del hogar.</p>
           </div>
         </div>
-        <div class="carousel-dots">
-          <label for="c1" aria-label="Slide 1"></label>
-          <label for="c2" aria-label="Slide 2"></label>
-          <label for="c3" aria-label="Slide 3"></label>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="how-section" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title">Así te ayudo</h2>
+        <p class="section-lead">Tres pasos para que el súper no te quite <strong>TÚ</strong> tiempo.</p>
+
+        <div class="steps-carousel-nav" aria-roledescription="carousel" aria-label="Pasos de cómo te ayudo">
+          <input type="radio" name="steps-carousel" id="step-c1" checked>
+          <input type="radio" name="steps-carousel" id="step-c2">
+          <input type="radio" name="steps-carousel" id="step-c3">
+          <div class="steps-carousel-wrap">
+            <div class="steps-carousel" id="steps-carousel-el">
+              <article class="step-card step-card--learn" aria-roledescription="slide" aria-label="1 de 3">
+                <div class="step-card-scene">
+                <div class="step-card-row step-card-row--dialog">
+                <div class="step-card-juanito">
+                  <img src="assets/images/juanito-inventario.png" alt="Juanito con su lista, aprendiendo de tu hogar" width="600" height="800" loading="lazy">
+                </div>
+                <div class="step-card-bubble">
+                  <div class="step-card-bubble-header">
+                    <span class="step-card-num" aria-hidden="true">1</span>
+                    <h3>Aprendo de tu hogar</h3>
+                  </div>
+                  <p>Registro lo que comprás y cuánto te dura cada cosa. Así sé qué te va a faltar antes de que se te acabe.</p>
+                </div>
+                </div>
+                <div class="step-card-row step-card-row--phone">
+                <div class="step-card-phone">
+                  <div class="step-card-phone-inner">
+                    <img src="assets/screenshots/apple/inventario.png" alt="Pantalla de Naju con stock estimado por producto" width="390" height="844" loading="lazy">
+                  </div>
+                </div>
+                </div>
+                </div>
+              </article>
+
+              <article class="step-card step-card--predict" aria-roledescription="slide" aria-label="2 de 3">
+                <div class="step-card-scene">
+                <div class="step-card-row step-card-row--dialog">
+                <div class="step-card-juanito">
+                  <img src="assets/images/juanito-prediccion.png" alt="Juanito dándote un consejo sobre tu próxima compra" width="600" height="800" loading="lazy">
+                </div>
+                <div class="step-card-bubble">
+                  <div class="step-card-bubble-header">
+                    <span class="step-card-num" aria-hidden="true">2</span>
+                    <h3>Armo tu próxima compra</h3>
+                  </div>
+                  <p>Te propongo productos con <strong>predicción</strong>: vos solo confirmás lo que no estoy seguro. Menos decisiones, más tiempo libre.</p>
+                </div>
+                </div>
+                <div class="step-card-row step-card-row--phone">
+                <div class="step-card-phone">
+                  <div class="step-card-phone-inner">
+                    <img src="assets/screenshots/apple/home.png" alt="Pantalla de inicio con sugerencias predictivas" width="390" height="844" loading="lazy">
+                  </div>
+                </div>
+                </div>
+                </div>
+              </article>
+
+              <article class="step-card step-card--save" aria-roledescription="slide" aria-label="3 de 3">
+                <div class="step-card-scene">
+                <div class="step-card-row step-card-row--dialog">
+                <div class="step-card-juanito">
+                  <img src="assets/images/juanito-carrito.png" alt="Juanito presentándote tu carrito listo para confirmar" width="600" height="800" loading="lazy">
+                </div>
+                <div class="step-card-bubble">
+                  <div class="step-card-bubble-header">
+                    <span class="step-card-num" aria-hidden="true">3</span>
+                    <h3>Ahorrás y confirmás</h3>
+                  </div>
+                  <p>Tu carrito ya viene listo, con descuentos Naju y fecha de entrega. Un toque y listo — o lo posponés si querés.</p>
+                </div>
+                </div>
+                <div class="step-card-row step-card-row--phone">
+                <div class="step-card-phone">
+                  <div class="step-card-phone-inner">
+                    <img src="assets/screenshots/apple/carrito.png" alt="Pantalla del carrito con descuento Naju" width="390" height="844" loading="lazy">
+                  </div>
+                </div>
+                </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="steps-carousel-dots" role="tablist" aria-label="Elegir paso">
+            <label for="step-c1" role="tab" aria-label="Paso 1: Aprendo de tu hogar"></label>
+            <label for="step-c2" role="tab" aria-label="Paso 2: Armo tu próxima compra"></label>
+            <label for="step-c3" role="tab" aria-label="Paso 3: Ahorrás y confirmás"></label>
+          </div>
         </div>
       </div>
-      <p class="hero-oneliner">Naju usa el poder de la IA para conocerte, saber lo que necesitás y abastecerte, así no te falta nada.</p>
-      <div class="benefit-strip">
-        <span>Te conoce</span>
-        <span>Sabe lo que necesitás</span>
-        <span>Abastece tu hogar</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="descargar" class="download-block">
-    <div class="wrap">
-      <h2 class="download-title">Descargar</h2>
-      <p style="margin:0; font-size:1rem; color: var(--text-muted);">Gratis en celular y tablet.</p>
-      <div class="stores">
-        <a href="https://apps.apple.com/app/naju/id674600629" class="store-badge apple" target="_blank" rel="noopener noreferrer" aria-label="App Store">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          App Store
-        </a>
-        <span class="store-badge google disabled" aria-label="Google Play próximamente">
-          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.16 5.947a.998.998 0 01-1.466-.83l-.01-14.02a1 1 0 011.467-.83l10.16 5.947zM14.205 12L5.792 3.587a.999.999 0 011.466-.83l10.163 5.948-2.302 2.302-1.914 1.095z"/><path fill="#34A853" d="M21.803 12.861l-3.199-1.828-.006-.003-3.393 1.945-1.294 1.294 2.302 2.302 3.59-2.054a1 1 0 00.4-1.656z"/><path fill="#FBBC05" d="M14.205 12l1.914-1.095 2.302-2.302-2.302-2.302-1.914-1.095-2.302 2.302z"/><path fill="#EA4335" d="M21.803 12.861a1 1 0 00-.4-1.656l-3.59-2.054-2.302 2.302 2.302 2.302 3.59 2.054a1 1 0 00.4-1.656z"/></svg>
-          Próximamente
-        </span>
+    <section id="descargar" class="download-block">
+      <div class="wrap">
+        <h2 class="download-title">Descargar</h2>
+        <p style="margin:0; font-size:1rem; color: var(--text-muted);">Gratis en celular y tablet.</p>
+        <div class="stores">
+          <a href="https://apps.apple.com/app/naju/id674600629" class="store-badge apple" target="_blank" rel="noopener noreferrer" aria-label="App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.wwideas.naju_app" class="store-badge google" target="_blank" rel="noopener noreferrer" aria-label="Google Play">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.16 5.947a.998.998 0 01-1.466-.83l-.01-14.02a1 1 0 011.467-.83l10.16 5.947zM14.205 12L5.792 3.587a.999.999 0 011.466-.83l10.163 5.948-2.302 2.302-1.914 1.095z"/><path fill="#34A853" d="M21.803 12.861l-3.199-1.828-.006-.003-3.393 1.945-1.294 1.294 2.302 2.302 3.59-2.054a1 1 0 00.4-1.656z"/><path fill="#FBBC05" d="M14.205 12l1.914-1.095 2.302-2.302-2.302-2.302-1.914-1.095-2.302 2.302z"/><path fill="#EA4335" d="M21.803 12.861a1 1 0 00-.4-1.656l-3.59-2.054-2.302 2.302 2.302 2.302 3.59 2.054a1 1 0 00.4-1.656z"/></svg>
+            Google Play
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer id="contacto" role="contentinfo">
@@ -585,31 +761,44 @@
 
   <script>
     (function () {
-      var carousel = document.getElementById('carousel-el');
-      var inputs = document.querySelectorAll('.carousel-nav input[name="carousel"]');
+      var carousel = document.getElementById('steps-carousel-el');
+      var inputs = document.querySelectorAll('.steps-carousel-nav input[name="steps-carousel"]');
       if (!carousel || !inputs.length) return;
 
       var total = inputs.length;
+      var autoTimer = null;
+      var AUTO_MS = 6000;
+
       function scrollToSlide(i) {
-        var w = carousel.offsetWidth;
-        carousel.scrollTo({ left: w * i, behavior: 'smooth' });
-        if (inputs[i]) inputs[i].checked = true;
+        var index = ((i % total) + total) % total;
+        carousel.scrollTo({ left: carousel.offsetWidth * index, behavior: 'smooth' });
+        if (inputs[index]) inputs[index].checked = true;
+      }
+
+      function currentIndex() {
+        return Math.round(carousel.scrollLeft / carousel.offsetWidth);
+      }
+
+      function resetAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = setInterval(function () {
+          scrollToSlide(currentIndex() + 1);
+        }, AUTO_MS);
       }
 
       inputs.forEach(function (inp, i) {
-        inp.addEventListener('change', function () { scrollToSlide(i); });
+        inp.addEventListener('change', function () {
+          scrollToSlide(i);
+          resetAuto();
+        });
       });
 
       carousel.addEventListener('scroll', function () {
-        var index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+        var index = currentIndex();
         if (inputs[index]) inputs[index].checked = true;
-      });
+      }, { passive: true });
 
-      setInterval(function () {
-        var current = Math.round(carousel.scrollLeft / carousel.offsetWidth);
-        var next = (current + 1) % total;
-        scrollToSlide(next);
-      }, 2000);
+      resetAuto();
     })();
   </script>
 </body>

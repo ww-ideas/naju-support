@@ -1,91 +1,42 @@
-# ACCOUNT DELETION - NAJU
+# Account and data deletion · Naju
 
-**Last Updated:** May 12, 2026
+**Last updated:** May 18, 2026
 
-**Version:** 1.0
-
----
-
-## 1. PURPOSE OF THIS PAGE
-
-This public page explains how to request deletion of your Naju account and associated personal data if you cannot access the app or prefer to submit the request outside the app.
-
-This page is intended to satisfy the external account deletion URL requirement for Google Play.
+This page explains how to delete your Naju account and associated personal data.
 
 ---
 
-## 2. IN-APP ACCOUNT DELETION
+## Delete your account in the app
 
-If you can still sign in to Naju, you can delete your account directly in the app:
+If you still have access to the app:
 
-1. Open `Mi Perfil` / `My Profile`.
-2. Tap `Eliminar cuenta` / `Delete account`.
-3. Confirm the deletion request.
-
-This action is intended to remove your account and associated user data from the service, subject to the limited exceptions described below.
+1. Open **Naju** on your phone or tablet.
+2. Go to **Perfil** (Profile).
+3. Tap **Delete account** and follow the on-screen steps to confirm.
 
 ---
 
-## 3. EXTERNAL ACCOUNT DELETION REQUEST
+## Request deletion without app access
 
-If you cannot access the app, send your deletion request through one of these channels:
+If you cannot sign in or no longer have the app installed, you can request deletion by email:
 
-- Email: soporte@naju.com.ar
-- LinkedIn: https://www.linkedin.com/company/naju/
+- **Email:** [soporte@naju.com.ar](mailto:soporte@naju.com.ar)
 
-To help us verify your identity and process the request securely, please include:
+Please write from the email address linked to your Naju account, or include enough information for us to verify your identity (for example, the email you used to register and your full name).
 
-- the email address associated with your Naju account;
-- your full name, if available on the account;
-- a short statement that you want your Naju account and personal data deleted; and
-- any additional information needed to identify the correct account if you no longer control the registered email.
-
-If possible, contact us from the same email address linked to your account.
+You may also contact us on [LinkedIn](https://www.linkedin.com/company/naju/).
 
 ---
 
-## 4. WHAT WE DELETE
+## What happens after you request deletion
 
-When your request is validated and deletion applies, we will delete or anonymize personal data associated with your account, which may include:
-
-- account profile information;
-- household preference information tied to your account;
-- pantry, shopping cart, and related household management records associated with your account; and
-- support or integration records that are no longer required.
+When your request is processed, we delete or anonymize your personal data, except where we must keep certain information for legal obligations, security, fraud prevention, or backup retention periods described in our [Privacy Policy](privacy_policy.md).
 
 ---
 
-## 5. WHAT MAY BE RETAINED TEMPORARILY OR EXCEPTIONALLY
+## Related documents
 
-Some data may be retained for a limited period when retention is necessary for:
+- [Privacy Policy](privacy_policy.md) — section 9 (Account and data deletion)
+- [Terms of Use](terms_of_use.md)
 
-- legal compliance;
-- fraud prevention or abuse investigation;
-- security logging and incident response; or
-- backups and disaster recovery cycles where immediate deletion is not technically feasible.
-
-If retained, that data will be kept only for the period reasonably necessary for those purposes.
-
----
-
-## 6. RESPONSE TIME
-
-We aim to review and respond to verified deletion requests within a reasonable time.
-
-If we need more information to identify your account safely, we will contact you through the channel you used for the request.
-
----
-
-## 7. RELATED DOCUMENTS
-
-- Privacy Policy: https://ww-ideas.github.io/naju-support/privacidad.html
-- Terms of Use: https://ww-ideas.github.io/naju-support/terminos.html
-
----
-
-## 8. CONTACT
-
-If you have questions about privacy or deletion requests, contact:
-
-- soporte@naju.com.ar
-- https://www.linkedin.com/company/naju/
+**Contact:** soporte@naju.com.ar · info@naju.com.ar

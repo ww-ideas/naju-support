@@ -55,6 +55,7 @@
     .doc ul, .doc ol { margin: 0.5em 0; padding-left: 1.5em; }
     .doc hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 1.5em 0; }
     .doc strong { color: var(--text); }
+    .doc a { color: var(--naju-blue); }
     .loading { color: var(--text-muted); padding: 2rem; text-align: center; }
     .error { color: #c53030; padding: 2rem; }
   </style>
@@ -68,15 +69,75 @@
       <p class="loading">Loading account deletion instructions…</p>
     </article>
   </div>
+  <script type="text/plain" id="account-deletion-md"># Account and data deletion · Naju
+
+**Last updated:** May 18, 2026
+
+This page explains how to delete your Naju account and associated personal data.
+
+---
+
+## Delete your account in the app
+
+If you still have access to the app:
+
+1. Open **Naju** on your phone or tablet.
+2. Go to **Perfil** (Profile).
+3. Tap **Delete account** and follow the on-screen steps to confirm.
+
+---
+
+## Request deletion without app access
+
+If you cannot sign in or no longer have the app installed, you can request deletion by email:
+
+- **Email:** soporte@naju.com.ar
+
+Please write from the email address linked to your Naju account, or include enough information for us to verify your identity (for example, the email you used to register and your full name).
+
+You may also contact us on LinkedIn: https://www.linkedin.com/company/naju/
+
+---
+
+## What happens after you request deletion
+
+When your request is processed, we delete or anonymize your personal data, except where we must keep certain information for legal obligations, security, fraud prevention, or backup retention periods described in our Privacy Policy.
+
+---
+
+## Related documents
+
+- Privacy Policy (privacy_policy.md) — section 9 (Account and data deletion)
+- Terms of Use (terms_of_use.md)
+
+**Contact:** soporte@naju.com.ar · info@naju.com.ar
+</script>
   <script>
-    fetch('account_deletion.md')
-      .then(r => r.ok ? r.text() : Promise.reject(new Error(r.statusText)))
-      .then(md => {
-        document.getElementById('content').innerHTML = marked.parse(md);
-      })
-      .catch(() => {
-        document.getElementById('content').innerHTML = '<p class="error">Could not load the document. <a href="account_deletion.md">Open the Markdown file</a>.</p>';
-      });
+    (function () {
+      var content = document.getElementById('content');
+      var fallback = document.getElementById('account-deletion-md');
+
+      function render(md) {
+        content.innerHTML = marked.parse(md);
+      }
+
+      function showError() {
+        content.innerHTML = '<p class="error">Could not load the document. <a href="account_deletion.md">Open the Markdown file</a>.</p>';
+      }
+
+      if (location.protocol === 'file:') {
+        render(fallback.textContent.trim());
+        return;
+      }
+
+      fetch('account_deletion.md')
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(render)
+        .catch(function () {
+          if (fallback) render(fallback.textContent.trim());
+          else showError();
+        });
+    })();
   </script>
 </body>
 </html>
