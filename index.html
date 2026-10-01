@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/naju.css">
+  <link rel="stylesheet" href="assets/css/naju-bold.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="index.html" class="site-logo" aria-label="Naju inicio">
-        <img src="assets/logo.png" alt="" width="36" height="36">
+        <img src="assets/logo.png" alt="" width="38" height="38">
         <span>Naju</span>
       </a>
 
@@ -54,10 +54,8 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="hero-card">
-          <div class="hero-card__figure">
-            <img src="assets/images/assistant_juanito_close.png" alt="Juanito, asistente personal de compras de Naju" width="488" height="552" loading="eager">
-          </div>
           <div class="hero-card__copy">
+            <span class="hero-eyebrow">Asistente de compras del hogar</span>
             <h1 id="hero-title">¡Hola! Soy Juanito 👋</h1>
             <p>Soy tu <strong>asistente personal para las compras del hogar</strong>.</p>
             <p>Aprendo de tus hábitos para anticiparme a lo que necesitás y ayudarte a que <strong>nunca te falte nada en casa ni pagues de más</strong>.</p>
@@ -67,9 +65,18 @@
               <a class="btn btn--ghost" href="#como-funciona">Cómo funciona</a>
             </div>
           </div>
+          <div class="hero-card__figure">
+            <img src="assets/images/assistant_juanito_close.png" alt="Juanito, asistente personal de compras de Naju" width="488" height="552" loading="eager">
+          </div>
         </div>
       </div>
     </section>
+
+    <aside class="statement-band" aria-label="Promesa">
+      <div class="wrap">
+        <p>Nunca te falte nada. <strong>Nunca pagues de más.</strong></p>
+      </div>
+    </aside>
 
     <section id="como-funciona" class="section" aria-labelledby="how-title">
       <div class="wrap wrap--narrow">
@@ -85,6 +92,7 @@
           <div class="steps-carousel-wrap">
             <div class="steps-carousel" id="steps-carousel-el">
               <article class="step-card step-card--learn" aria-roledescription="slide" aria-label="1 de 3">
+                <span class="step-card-watermark" aria-hidden="true">1</span>
                 <div class="step-card-scene">
                   <div class="step-card-row step-card-row--dialog">
                     <div class="step-card-juanito">
@@ -109,6 +117,7 @@
               </article>
 
               <article class="step-card step-card--predict" aria-roledescription="slide" aria-label="2 de 3">
+                <span class="step-card-watermark" aria-hidden="true">2</span>
                 <div class="step-card-scene">
                   <div class="step-card-row step-card-row--dialog">
                     <div class="step-card-juanito">
@@ -133,6 +142,7 @@
               </article>
 
               <article class="step-card step-card--save" aria-roledescription="slide" aria-label="3 de 3">
+                <span class="step-card-watermark" aria-hidden="true">3</span>
                 <div class="step-card-scene">
                   <div class="step-card-row step-card-row--dialog">
                     <div class="step-card-juanito">
@@ -176,7 +186,7 @@
             App Store
           </a>
           <a href="https://play.google.com/store/apps/details?id=com.wwideas.naju_app" class="store-badge google" target="_blank" rel="noopener noreferrer" aria-label="Descargar en Google Play">
-            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.16 5.947a.998.998 0 01-1.466-.83l-.01-14.02a1 1 0 011.467-.83l10.16 5.947zM14.205 12L5.792 3.587a.999.999 0 011.466-.83l10.163 5.948-2.302 2.302-1.914 1.095z"/><path fill="#34A853" d="M21.803 12.861l-3.199-1.828-.006-.003-3.393 1.945-1.294 1.294 2.302 2.302 3.59-2.054a1 1 0 00.4-1.656z"/><path fill="#FBBC05" d="M14.205 12l1.914-1.095 2.302-2.302-2.302-2.302-1.914-1.095-2.302 2.302z"/><path fill="#EA4335" d="M21.803 12.861a1 1 0 00-.4-1.656l-3.59-2.054-2.302 2.302 2.302 2.302 3.59 2.054a1 1 0 00.4-1.656z"/></svg>
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.16 5.947a.998.998 0 01-1.466-.83l-.01-14.02a1 1 0 011.467-.83l10.16 5.947zM14.205 12L5.792 3.587a.999.999 0 011.466-.83l10.163 5.948-2.302 2.302-1.914 1.095z"/><path fill="currentColor" d="M21.803 12.861l-3.199-1.828-.006-.003-3.393 1.945-1.294 1.294 2.302 2.302 3.59-2.054a1 1 0 00.4-1.656z"/><path fill="currentColor" d="M14.205 12l1.914-1.095 2.302-2.302-2.302-2.302-1.914-1.095-2.302 2.302z"/><path fill="currentColor" d="M21.803 12.861a1 1 0 00-.4-1.656l-3.59-2.054-2.302 2.302 2.302 2.302 3.59 2.054a1 1 0 00.4-1.656z"/></svg>
             Google Play
           </a>
         </div>
