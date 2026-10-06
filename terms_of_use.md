@@ -1,8 +1,8 @@
 # TERMS OF USE - NAJU
 
-**Last Updated:** May 12, 2026
+**Last Updated:** October 6, 2026
 
-**Version:** 3.1
+**Version:** 3.2
 
 ---
 
@@ -142,15 +142,27 @@ Prices for products or services offered through Naju are displayed in Argentine 
 
 We reserve the right to modify prices at any time, but changes will not affect already confirmed orders.
 
-### 8.2 Payment Methods
+### 8.2 Order Authorization and Final Charge Amount
+
+By approving a purchase order placed through Naju, you authorize Naju and its payment processors to charge the credit or debit card (or other payment method) you provided for payment of that order.
+
+The amount ultimately charged may differ, typically to a limited extent, from the amount authorized when you approved the order. Such differences may arise from, among other causes:
+
+- products sold by weight or other fractional or variable measures, whose final price is determined upon assembly of the purchase;
+- the application of special promotions, discounts, or similar commercial adjustments; or
+- adjustments made to satisfy the supply of critical products for your household.
+
+Final amounts charged are usually equal to or lower than the amounts previously authorized, but may in some cases be higher. By approving the order, you expressly consent to such variations and to the capture of the final charge against the payment method you provided, subject to the following limit: if the final charge would exceed the previously authorized amount by more than ARS 10,000 (ten thousand Argentine pesos), Naju will contact you before processing that charge and will not capture the excess without your confirmation.
+
+### 8.3 Payment Methods
 
 Accepted payment methods will be indicated in the Application when this functionality is enabled for your account.
 
-### 8.3 Order Cancellation
+### 8.4 Order Cancellation
 
 You may request to cancel an order in accordance with the options and time limits indicated in the Application at the time of ordering. Once an order has been confirmed and is in preparation or has been dispatched, cancellation may no longer be possible. Naju reserves the right to reject cancellation requests when the order cannot be stopped (for example, when it has already been handed over to the delivery provider).
 
-### 8.4 Refunds
+### 8.5 Refunds
 
 Refund policy will be indicated in the Application when the payment and delivery functionality is enabled for your account. In general, refunds may be available for cancelled orders (when cancellation is accepted), for undelivered or defective products in accordance with applicable law, or in other circumstances that we may specify. Refunds will be processed through the same payment method used for the purchase, within the timeframes permitted by our payment processors and Argentine law. Naju is not obligated to grant refunds where the Terms or the applicable refund policy do not provide for them.
 
