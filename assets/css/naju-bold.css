@@ -1094,3 +1094,89 @@ a:focus-visible {
     transform: none;
   }
 }
+
+/* ========== Hidden videos page (noindex / unlisted links) ========== */
+.site-header--minimal .site-header__end { display: none; }
+.videos-page .site-header { margin-bottom: 0; }
+.videos-hero {
+  padding: 2.5rem 0 3.5rem;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 0%, rgba(69, 157, 228, 0.18), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(67, 188, 135, 0.16), transparent 50%),
+    var(--bg, #f4f8fc);
+}
+.videos-kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--naju-blue-dark, #1b6fb8);
+  margin: 0 0 0.75rem;
+}
+.videos-hero h1 {
+  font-family: Outfit, DM Sans, system-ui, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  margin: 0 0 0.65rem;
+  color: var(--text, #0f2438);
+}
+.videos-lead {
+  margin: 0 0 2.25rem;
+  color: var(--text-muted, #4a6278);
+  font-size: 1.05rem;
+}
+.video-block {
+  margin-bottom: 2.25rem;
+  padding: 1.35rem 1.35rem 1.5rem;
+  background: #fff;
+  border-radius: var(--radius-lg, 18px);
+  box-shadow: 0 10px 32px rgba(15, 50, 80, 0.08);
+}
+.video-block h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+  color: var(--text, #0f2438);
+}
+.video-block__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--naju-blue-dark, #1b6fb8);
+  flex-shrink: 0;
+}
+.video-block > p {
+  margin: 0 0 1rem;
+  color: var(--text-muted, #4a6278);
+  font-size: 0.98rem;
+}
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0f2438;
+}
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.site-footer--minimal {
+  padding: 1.25rem 0 2rem;
+}
+.site-footer--minimal .footer-links {
+  margin: 0;
+  text-align: left;
+}
